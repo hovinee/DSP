@@ -1,0 +1,61 @@
+{
+  "banner": {
+    "banner_image": "/images/banner.png",
+    "dsp_image": "/images/logo_labkid.png",
+    "intro1": "세계의 요구에 부합하는 산업기반의 메타버스",
+    "intro2": "차세대 기술을 통한 메타버스의 아름다움을 전하다",
+    "intro3": "랩키드 인더스트리는 항상 혁신적인 메타버스 제품을 개발하여\n이용자의 만족과 감동을 추구해 왔습니다. 랩키드는 모든 제품이 메타버스\n의 새로운 명작으로 거듭날 수 있도록 끊임없는 노력을 기울이고 있습니다."
+  },
+  "contents": [
+    {
+      "title": "DSP",
+      "description": "소재 기술의 선두주자, DSP의 세계를 깊이 살펴보세요!",
+      "type": "3d",
+      "dsp_icon": "/images/logo/dsp_logo.png",
+      "thumbnail": "/images/thumbnail/dsp.png"
+    },
+    {
+      "title": "굿네이버스",
+      "description": "ZEPETO 기반의 클린 빌리지",
+      "type": "2d",
+      "dsp_icon": "/images/logo/naver_logo.png",
+      "thumbnail": "/images/thumbnail/naver.png"
+    },
+    {
+      "title": "공항철도주식회사",
+      "description": "기관사가 되어 계기판 점검, BHS 체크 등 승객들을 위한 일을 해보자",
+      "type": "2d",
+      "dsp_icon": "/images/logo/train_logo.png",
+      "thumbnail": "/images/thumbnail/train.png"
+    },
+    {
+      "title": "포스코1%나눔재단",
+      "description": "포스코1%나눔재단의 그리닛포스 메타버스",
+      "type": "2d",
+      "dsp_icon": "/images/logo/posco_logo.png",
+      "thumbnail": "/images/thumbnail/posco2.png"
+    },
+
+    {
+      "title": "CJ 올리브네트웍스",
+      "description": "CJ 올리브네트웍스 팩토리원 메타버스",
+      "type": "2d",
+      "dsp_icon": "/images/logo/cj_logo.png",
+      "thumbnail": "/images/thumbnail/cj.png"
+    },
+    {
+      "title": "산림복지진흥원",
+      "description": "한국산림복지진흥원의 포로롱포이 메타버스",
+      "type": "2d",
+      "dsp_icon": "/images/logo/wood_logo.png",
+      "thumbnail": "/images/thumbnail/wood.png"
+    },
+    {
+      "title": "한국항공우주산업",
+      "description": "항공기의 관련된 과학적 논리들을 한번에",
+      "type": "2d",
+      "dsp_icon": "/images/logo/kai_logo.png",
+      "thumbnail": "/images/thumbnail/kai.png"
+    }
+  ]
+}
