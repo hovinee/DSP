@@ -41,7 +41,7 @@ const AutoSizeImage = ({
           width={0}
           height={0}
           sizes="100%"
-          className="h-full w-full "
+          className="h-full w-full object-cover"
           alt=""
           priority={priority}
         />
