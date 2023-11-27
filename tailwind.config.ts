@@ -8,6 +8,9 @@ const config: Config = {
         '2xl': '1800px',
         // => @media (min-width: 992px) { ... }
       },
+      colors: {
+        C0C0C0: '#C0C0C0',
+      },
       fontSize: {
         '10': [
           '1rem',
@@ -61,6 +64,12 @@ const config: Config = {
           '2.1rem',
           {
             lineHeight: '2.724rem',
+          },
+        ],
+        '23': [
+          '2.3rem',
+          {
+            lineHeight: '2.8rem',
           },
         ],
         '25': [

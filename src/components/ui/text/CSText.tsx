@@ -27,7 +27,7 @@ const fontSize: StringProps = {
   '54': 'text-54',
   '12 xl:14': 'text-12 xl:text-14',
   '12 xl:18': 'text-12 xl:text-18',
-  '17 xl:25': 'text-17 xl:text-25',
+  '15 xl:23': 'text-15 xl:text-23',
   '21 xl:31': 'text-21 xl:text-31',
   '37 xl:54': 'text-37 xl:text-54',
 }
@@ -35,6 +35,7 @@ const fontSize: StringProps = {
 const fontColor: StringProps = {
   black: 'text-black',
   white: 'text-white',
+  C0C0C0: 'text-C0C0C0',
 }
 
 const fontWeight: StringProps = {

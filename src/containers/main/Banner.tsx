@@ -29,7 +29,7 @@ const Banner = ({ data }: Props) => {
           {data.intro2}
         </CSText>
         <CSText
-          size="17 xl:25"
+          size="15 xl:23"
           color="white"
           className="mt-[1.5rem] whitespace-pre-line xl:mt-[2.3rem]"
         >

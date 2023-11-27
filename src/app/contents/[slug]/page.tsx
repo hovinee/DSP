@@ -8,28 +8,28 @@ const Contents = ({ params }: any) => {
 
   return (
     <>
-      <div className="relative">
+      <div className="xl:px-none relative h-[58.4rem] px-[5rem] xl:h-[100%]">
         <AutoSizeImage src={data.banner.banner_image} full priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-[9rem]">
           <AutoSizeImage
             src={data.banner.dsp_image}
-            className="h-[14rem] w-[25.4rem]"
+            className="h-[10rem] w-[18rem] xl:h-[14rem] xl:w-[25.4rem]"
           />
           <CSText size="18" color="white" weight="bold" className="mt-[1.5rem]">
             {data.banner.intro1}
           </CSText>
         </div>
       </div>
-      <div className="mx-auto flex gap-[6.2rem] py-[5.4rem]">
-        <section>
+      <div className="mx-auto flex justify-between gap-[3rem] py-[5.4rem] md:gap-[6.2rem]">
+        <section className="w-[32rem] md:w-[52rem]">
           <CSText size="18" color="white" weight="bold">
             {data.banner.intro1}
           </CSText>
-          <CSText size="35" color="white" weight="bold">
+          <CSText size="37" color="white" weight="bold">
             DSP LAB
           </CSText>
 
-          <div className="mt-[2.1rem] flex flex-col gap-12 whitespace-pre-line">
+          <div className="mt-[2.1rem] flex flex-col gap-12 whitespace-pre-line ">
             {data.contents.map((value, index) => (
               <div key={index}>
                 <CSText size="16" color="white" weight="bold">
@@ -47,7 +47,9 @@ const Contents = ({ params }: any) => {
           <div className="mt-[5.4rem] whitespace-pre-line">
             <div className="border-t border-t-white/20 py-[5.4rem]">
               <div className="flex gap-[1.8rem]">
-                <div className="h-[4.5rem] w-[4.5rem] rounded-full bg-[#D9D9D9] " />
+                <div className="w-[4.5rem]">
+                  <div className="h-[4.5rem] w-[4.5rem] rounded-full bg-[#D9D9D9]" />
+                </div>
                 <div>
                   <div>
                     <CSText size="18" color="white">
@@ -78,7 +80,9 @@ const Contents = ({ params }: any) => {
             </div>
             <div className="border-t border-t-white/20 py-[5.4rem]">
               <div className="flex gap-[1.8rem]">
-                <div className="h-[4.5rem] w-[4.5rem] rounded-full bg-[#D9D9D9] " />
+                <div className="w-[4.5rem]">
+                  <div className="h-[4.5rem] w-[4.5rem] rounded-full bg-[#D9D9D9]" />
+                </div>
                 <div>
                   <div>
                     <CSText size="18" color="white">

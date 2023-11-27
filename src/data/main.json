@@ -1,6 +1,6 @@
 {
   "banner": {
-    "banner_image": "/images/banner.png",
+    "banner_image": "/images/main_banner.png",
     "dsp_image": "/images/logo_labkid.png",
     "intro1": "세계의 요구에 부합하는 산업기반의 메타버스",
     "intro2": "차세대 기술을 통한 메타버스의 아름다움을 전하다",
@@ -33,7 +33,7 @@
       "description": "포스코1%나눔재단의 그리닛포스 메타버스",
       "type": "2d",
       "dsp_icon": "/images/logo/posco_logo.png",
-      "thumbnail": "/images/thumbnail/posco2.png"
+      "thumbnail": "/images/thumbnail/posco.png"
     },
 
     {
