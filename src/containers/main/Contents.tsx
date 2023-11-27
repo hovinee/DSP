@@ -72,29 +72,21 @@ const Contents = ({ data }: Props) => {
             <motion.div
               className="absolute z-10"
               variants={{
-                rest: { opacity: windowWidth >= 1280 ? 0 : 1 },
-                hover: { opacity: windowWidth >= 1280 ? 1 : 0 },
+                rest: { opacity: 0 },
+                hover: { opacity: 1 },
               }}
             >
               {value.type === '3d' && isHoverIndex === index && (
                 <Model isHover={isHover} />
               )}
 
-              {windowWidth >= 1280 &&
-                value.type === '2d' &&
-                isHoverIndex === index && (
-                  <div className="grid h-[22.7rem] w-[30rem] place-items-center rounded-[1.8rem] bg-black/70 xl:h-[32rem] xl:w-[42.3rem]">
-                    <CSText size="18" weight="bold" color="white">
-                      서비스 준비중 입니다
-                    </CSText>
-                  </div>
-                )}
-
-              <div className="grid h-[22.7rem] w-[30rem] place-items-center rounded-[1.8rem] bg-black/70 xl:h-[32rem] xl:w-[42.3rem]">
-                <CSText size="18" weight="bold" color="white">
-                  서비스 준비중 입니다
-                </CSText>
-              </div>
+              {value.type === '2d' && isHoverIndex === index && (
+                <div className="grid h-[22.7rem] w-[30rem] place-items-center rounded-[1.8rem] bg-black/70 xl:h-[32rem] xl:w-[42.3rem]">
+                  <CSText size="18" weight="bold" color="white">
+                    서비스 준비중 입니다
+                  </CSText>
+                </div>
+              )}
             </motion.div>
 
             <motion.div
