@@ -8,7 +8,7 @@ const Contents = ({ params }: any) => {
 
   return (
     <>
-      <div className="xl:h-none relative h-[50rem] px-[5rem] xl:px-0">
+      <div className="xl:h-none relative mt-[8.4rem] h-[50rem] px-[5rem] xl:px-0">
         <AutoSizeImage src={data.banner.banner_image} full priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-[9rem]">
           <AutoSizeImage

@@ -13,7 +13,7 @@ const Header = () => {
     <>
       {param.slug ? (
         <header
-          className="fixed inset-0 bottom-auto z-10 flex h-[8.4rem] w-full flex-col justify-center bg-black pl-[9rem] shadow-2xl shadow-black/50"
+          className="fixed z-10 flex h-[8.4rem] w-full flex-col justify-center bg-black pl-[9rem] shadow-2xl shadow-black/50"
           ref={measuredRef}
         >
           <Link href={'/'}>
@@ -27,7 +27,7 @@ const Header = () => {
         <header
           className={`${!sticky && 'absolute bg-transparent'} ${
             sticky && 'fixed bg-black shadow-2xl shadow-black'
-          } inset-0 bottom-auto z-10 flex h-[8.4rem] w-full flex-col justify-center pl-[9rem] `}
+          } inset-0 bottom-auto z-10 flex h-[8.4rem] w-full flex-col justify-center pl-[9rem]`}
           ref={measuredRef}
         >
           <Link href={'/'}>

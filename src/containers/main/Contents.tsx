@@ -23,7 +23,27 @@ const Contents = ({ data }: Props) => {
     setIsHover(enabled)
     setIsHoverIndex(index)
   }
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window === 'object' ? window.innerWidth : 0,
+  )
 
+  // 창 크기 변경 시 실행되는 함수
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  // 컴포넌트가 처음 렌더링될 때 이벤트 리스너 추가
+  useEffect(() => {
+    if (typeof window === 'object') {
+      window.addEventListener('resize', handleResize)
+
+      // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+    }
+  }, [])
+  console.log(windowWidth)
   return (
     <div className="grid w-full grid-cols-2 gap-y-[3rem] px-[4rem] pb-[9rem] lg:grid-cols-3 xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
       {data.map((value, index) => {
