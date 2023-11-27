@@ -10,7 +10,7 @@ interface Props {
 
 const Banner = ({ data }: Props) => {
   return (
-    <div className="relative h-[58.4rem] xl:h-[100%]">
+    <div className="relative h-[50rem] xl:h-[100%]">
       <AutoSizeImage src={data.banner_image} full priority />
 
       <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-t from-black px-[9rem]">

@@ -19,7 +19,7 @@ const Contents = ({ data }: Props) => {
   const [isHover, setIsHover] = useState<boolean>(false)
   const [isHoverIndex, setIsHoverIndex] = useState<number | null>(null)
 
-  const [windowWidth, setWindowWidth] = useState<number>(0)
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth)
   const hoverMouse = (enabled: boolean, index: number) => {
     setIsHover(enabled)
     setIsHoverIndex(index)
@@ -32,16 +32,18 @@ const Contents = ({ data }: Props) => {
 
   // 컴포넌트가 처음 렌더링될 때 이벤트 리스너 추가
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
+    if (typeof window === 'object') {
+      window.addEventListener('resize', handleResize)
 
-    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
-    return () => {
-      window.removeEventListener('resize', handleResize)
+      // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
     }
   }, [])
 
   return (
-    <div className="grid w-full grid-cols-2 gap-y-[0.9rem] px-[4rem] pb-[9rem] lg:grid-cols-3 xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
+    <div className="grid w-full grid-cols-2 gap-y-[3rem] px-[4rem] pb-[9rem] lg:grid-cols-3 xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
       {data.map((value, index) => {
         return (
           <motion.div
@@ -75,6 +77,7 @@ const Contents = ({ data }: Props) => {
               {value.type === '3d' && isHoverIndex === index && (
                 <Model isHover={isHover} />
               )}
+
               {value.type === '2d' && isHoverIndex === index && (
                 <div className="grid h-[22.7rem] w-[30rem] place-items-center rounded-[1.8rem] bg-black/70 xl:h-[32rem] xl:w-[42.3rem]">
                   <CSText size="18" weight="bold" color="white">
@@ -83,6 +86,7 @@ const Contents = ({ data }: Props) => {
                 </div>
               )}
             </motion.div>
+
             <motion.div
               variants={{
                 rest: { opacity: 1 },

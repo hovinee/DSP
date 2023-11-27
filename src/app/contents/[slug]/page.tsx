@@ -8,7 +8,7 @@ const Contents = ({ params }: any) => {
 
   return (
     <>
-      <div className="xl:h-none relative h-[58.4rem] px-[5rem] xl:px-0">
+      <div className="xl:h-none relative h-[50rem] px-[5rem] xl:px-0">
         <AutoSizeImage src={data.banner.banner_image} full priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-[9rem]">
           <AutoSizeImage
@@ -70,7 +70,7 @@ const Contents = ({ params }: any) => {
                       </div>
                     ))}
                   </div>
-                  <div className="w-[25rem] xl:w-[37.2rem]">
+                  <div className="w-[25rem] lg:w-[37.2rem]">
                     <CSText size="15" color="white" className="mt-[2.2rem]">
                       {
                         '이 프로그램은 정말 흥미롭네요.\n 공정이 움직이는것을 직접 볼수 있고 소재들도 가까이서 볼 수 있어서 좋아요'
@@ -105,7 +105,7 @@ const Contents = ({ params }: any) => {
                       </div>
                     ))}
                   </div>
-                  <div className="w-[25rem] xl:w-[37.2rem]">
+                  <div className="w-[25rem] lg:w-[37.2rem]">
                     <CSText size="15" color="white" className="mt-[2.2rem]">
                       {
                         '코일의 생산을 직접 체험하는거 같은 느낌이 드네요.\n메타버스 속 세상은 재밌네요. 궁금했던 부분들을 3d로 볼 수 있다는게 놀랍네요.'
