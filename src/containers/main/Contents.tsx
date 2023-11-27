@@ -43,9 +43,9 @@ const Contents = ({ data }: Props) => {
       }
     }
   }, [])
-  console.log(windowWidth)
+
   return (
-    <div className="grid w-full grid-cols-2 gap-y-[3rem] px-[4rem] pb-[9rem] lg:grid-cols-3 xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
+    <div className="grid w-full grid-cols-2 gap-y-[3rem] px-[4rem] pb-[9rem] lg:grid-cols-3 xl:mt-[-15rem] xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
       {data.map((value, index) => {
         return (
           <motion.div
