@@ -21,7 +21,7 @@ const Contents = ({ params }: any) => {
         </div>
       </div>
       <div className="mx-auto flex justify-between gap-[3rem] py-[5.4rem] md:gap-[6.2rem]">
-        <section className="w-[32rem] md:w-[52rem]">
+        <section className="w-[32rem] lg:w-[52rem]">
           <CSText size="18" color="white" weight="bold">
             {data.banner.intro1}
           </CSText>

@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import Model from '@components/threejs-model/Model'
 import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import CSText from '@components/ui/text/CSText'
 import { Main } from '@utils/types'
@@ -19,13 +19,29 @@ const Contents = ({ data }: Props) => {
   const [isHover, setIsHover] = useState<boolean>(false)
   const [isHoverIndex, setIsHoverIndex] = useState<number | null>(null)
 
+  const [windowWidth, setWindowWidth] = useState<number>(0)
   const hoverMouse = (enabled: boolean, index: number) => {
     setIsHover(enabled)
     setIsHoverIndex(index)
   }
 
+  // 창 크기 변경 시 실행되는 함수
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  // 컴포넌트가 처음 렌더링될 때 이벤트 리스너 추가
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
-    <div className="grid w-full grid-cols-2 gap-y-[0.9rem] px-[4rem] pb-[9rem] md:grid-cols-3 xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
+    <div className="grid w-full grid-cols-2 gap-y-[0.9rem] px-[4rem] pb-[9rem] lg:grid-cols-3 xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
       {data.map((value, index) => {
         return (
           <motion.div
