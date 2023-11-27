@@ -70,11 +70,13 @@ const Contents = ({ params }: any) => {
                       </div>
                     ))}
                   </div>
-                  <CSText size="15" color="white" className="mt-[2.2rem]">
-                    {
-                      '이 프로그램은 정말 흥미롭네요.\n공정이 움직이는것을 직접 볼수 있고 소재들도 가까이서 볼 수\n있어서 좋아요'
-                    }
-                  </CSText>
+                  <div className="w-[25rem] xl:w-[37.2rem]">
+                    <CSText size="15" color="white" className="mt-[2.2rem]">
+                      {
+                        '이 프로그램은 정말 흥미롭네요.\n 공정이 움직이는것을 직접 볼수 있고 소재들도 가까이서 볼 수 있어서 좋아요'
+                      }
+                    </CSText>
+                  </div>
                 </div>
               </div>
             </div>
@@ -103,11 +105,13 @@ const Contents = ({ params }: any) => {
                       </div>
                     ))}
                   </div>
-                  <CSText size="15" color="white" className="mt-[2.2rem]">
-                    {
-                      '코일의 생산을 직접 체험하는거 같은 느낌이 드네요.\n메타버스 속 세상은 재밌네요. 궁금했던 부분들을 3d로 볼 수\n있다는게 놀랍네요.'
-                    }
-                  </CSText>
+                  <div className="w-[25rem] xl:w-[37.2rem]">
+                    <CSText size="15" color="white" className="mt-[2.2rem]">
+                      {
+                        '코일의 생산을 직접 체험하는거 같은 느낌이 드네요.\n메타버스 속 세상은 재밌네요. 궁금했던 부분들을 3d로 볼 수 있다는게 놀랍네요.'
+                      }
+                    </CSText>
+                  </div>
                 </div>
               </div>
             </div>
