@@ -39,23 +39,22 @@ const Rig = () => {
   return null
 }
 
-const Model = ({ isHover }: any) => {
+const Model = ({ isHover, imageHeight }: any) => {
+  console.log(imageHeight)
   return (
-    <div className="h-[17rem] w-[30rem] xl:h-[24rem] xl:w-[42.3rem]">
-      <Canvas
-        gl={{ antialias: false }}
-        camera={{ position: [7, 3, 4] }}
-        style={{
-          width: '100%',
-          height: '100%',
-          borderTopLeftRadius: '1.8rem',
-          borderTopRightRadius: '1.8rem',
-        }}
-      >
-        {isHover && <Rig />}
-        {isHover && <SkyBox />}
-      </Canvas>
-    </div>
+    <Canvas
+      gl={{ antialias: false }}
+      camera={{ position: [7, 3, 4] }}
+      style={{
+        width: '100%',
+        height: `${imageHeight}px`,
+        borderTopLeftRadius: '1.8rem',
+        borderTopRightRadius: '1.8rem',
+      }}
+    >
+      {isHover && <Rig />}
+      {isHover && <SkyBox />}
+    </Canvas>
   )
 }
 export default Model

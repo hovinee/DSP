@@ -41,7 +41,9 @@ const AutoSizeImage = ({
           width={0}
           height={0}
           sizes="100%"
-          className="h-full w-full object-cover"
+          className={`h-full w-full ${
+            roundedTop ? borderTopRadius[roundedTop] : ''
+          }`}
           alt=""
           priority={priority}
         />

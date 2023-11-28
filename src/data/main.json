@@ -35,21 +35,6 @@
       "dsp_icon": "/images/logo/posco_logo.png",
       "thumbnail": "/images/thumbnail/posco.png"
     },
-
-    {
-      "title": "CJ 올리브네트웍스",
-      "description": "CJ 올리브네트웍스 팩토리원 메타버스",
-      "type": "2d",
-      "dsp_icon": "/images/logo/cj_logo.png",
-      "thumbnail": "/images/thumbnail/cj.png"
-    },
-    {
-      "title": "산림복지진흥원",
-      "description": "한국산림복지진흥원의 포로롱포이 메타버스",
-      "type": "2d",
-      "dsp_icon": "/images/logo/wood_logo.png",
-      "thumbnail": "/images/thumbnail/wood.png"
-    },
     {
       "title": "한국항공우주산업",
       "description": "항공기의 관련된 과학적 논리들을 한번에",
