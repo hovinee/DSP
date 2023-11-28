@@ -40,16 +40,17 @@ const Rig = () => {
 }
 
 const Model = ({ isHover, imageHeight }: any) => {
-  console.log(imageHeight)
+  const height = imageHeight / 10
   return (
     <Canvas
       gl={{ antialias: false }}
       camera={{ position: [7, 3, 4] }}
       style={{
         width: '100%',
-        height: `${imageHeight}px`,
+        height: `${height}rem`,
         borderTopLeftRadius: '1.8rem',
         borderTopRightRadius: '1.8rem',
+        borderColor: '#fff',
       }}
     >
       {isHover && <Rig />}
