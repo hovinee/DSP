@@ -25,7 +25,7 @@ const Contents = ({ data }: Props) => {
   }
 
   const divRef = useRef<HTMLDivElement>(null)
-  const [imageHeight, setImageHeight] = useState<number | null>(null)
+  const [imageHeight, setImageHeight] = useState<number>(0)
 
   useEffect(() => {
     const updateHeight = () => {
@@ -43,7 +43,8 @@ const Contents = ({ data }: Props) => {
     return () => {
       window.removeEventListener('resize', updateHeight)
     }
-  }, [])
+  }, [divRef.current])
+
   return (
     <div className="grid w-full grid-cols-2 gap-x-[1rem] gap-y-[3rem] px-[4rem] pb-[9rem] md:grid-cols-3 xl:mt-[-15rem] xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
       {data.map((value, index) => {
