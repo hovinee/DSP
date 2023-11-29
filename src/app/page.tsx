@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { getMainData } from '@lib/data'
 import Banner from '@containers/main/Banner'
 import Contents from '@containers/main/Contents'
