@@ -23,14 +23,15 @@ const SkyBox = () => {
 
 const Rig = () => {
   useFrame((state, delta) => {
+    console.log(Math.sin(state.pointer.x) * 15)
     easing.damp3(
       state.camera.position,
       [
-        Math.sin(state.pointer.x) * 8,
-        Math.atan(state.pointer.y) * 8,
-        Math.cos(state.pointer.x) * 8,
+        Math.sin(-state.pointer.x) * 15,
+        Math.atan(-state.pointer.y) * 15,
+        Math.cos(-state.pointer.x) * 15,
       ],
-      0.25,
+      0.1,
       delta,
     )
     state.camera.lookAt(0, 0, 0)
