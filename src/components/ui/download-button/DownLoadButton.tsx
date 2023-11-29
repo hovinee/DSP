@@ -5,7 +5,7 @@ import CSButton from '../button/CSButton'
 const DownLoadButton = () => {
   const handleDownload = () => {
     const filePath = '/dsp.zip' // 파일 경로
-    const publicUrl = process.env.NEXT_PUBLIC_BASE_URL // NEXT_PUBLIC_BASE_URL은 .env 파일에 설정되어 있어야 합니다.
+    const publicUrl = 'https://dsp-seven.vercel.app' // NEXT_PUBLIC_BASE_URL은 .env 파일에 설정되어 있어야 합니다.
     const fileUrl = `${publicUrl}${filePath}`
 
     // 이미지 다운로드
