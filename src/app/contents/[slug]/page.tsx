@@ -26,7 +26,7 @@ const Contents = ({ params }: any) => {
           <CSText size="18" color="white" weight="bold">
             {data.banner.intro1}
           </CSText>
-          <CSText size="37" color="white" weight="bold">
+          <CSText size="35" color="white" weight="bold">
             DSP LAB
           </CSText>
 

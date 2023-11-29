@@ -17,7 +17,7 @@ const Intro = () => {
             <CSText size="60" color="white" weight="bold">
               {data.banner.title}
             </CSText>
-            <div className="w-[51rem]">
+            <div className="mt-[1rem] w-[51rem]">
               <CSText size="18" color="white">
                 {data.banner.intro}
               </CSText>
@@ -26,7 +26,7 @@ const Intro = () => {
                 height="45"
                 rounded="30"
                 color="fff"
-                className="mt-[1.7rem] text-21 font-bold text-[#383838]"
+                className="mt-[5.5rem] text-21 font-bold text-[#383838]"
               >
                 문의하기
               </CSButton>
