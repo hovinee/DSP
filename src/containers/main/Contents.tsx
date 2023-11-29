@@ -96,7 +96,7 @@ const Contents = ({ data }: Props) => {
                 hover: { opacity: value.type === '3d' ? 0 : 1 },
               }}
             >
-              <AutoSizeImage src={value.thumbnail} roundedTop={1d8} full />
+              <AutoSizeImage src={value.thumbnail} roundedTop={18} full />
             </motion.div>
             <div className="mt-[-0.1rem] flex w-full gap-[1.1rem] rounded-b-[1.8rem] bg-white px-[2.1rem] py-[0.9rem] xl:px-[3rem] xl:py-[1.3rem]">
               <div className="w-[4rem] xl:w-[5.6rem]">
