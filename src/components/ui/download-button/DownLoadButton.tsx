@@ -1,5 +1,7 @@
 'use client'
 
+import CSButton from '../button/CSButton'
+
 const DownLoadButton = () => {
   const handleDownload = () => {
     const filePath = '/dsp.zip' // 파일 경로
@@ -15,12 +17,16 @@ const DownLoadButton = () => {
     document.body.removeChild(link)
   }
   return (
-    <button
+    <CSButton
       onClick={handleDownload}
-      className="h-[4.5rem] w-[23rem] rounded-[3rem] bg-white text-21 font-bold text-[#383838]"
+      width="230"
+      height="45"
+      rounded="30"
+      color="fff"
+      className="text-21 font-bold text-[#383838]"
     >
       Download
-    </button>
+    </CSButton>
   )
 }
 export default DownLoadButton

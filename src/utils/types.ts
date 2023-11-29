@@ -25,3 +25,28 @@ export interface DSP {
   end: string
   aside: { title: string; image_url: string }[]
 }
+
+export interface Footer {
+  meta: string
+  apple: string
+  google: string
+}
+
+export interface Intro {
+  banner: {
+    banner_image: string
+    title: string
+    intro: string
+  }
+  contents: {
+    title: string
+    description: string
+    intro_image: string
+  }[]
+  end: {
+    end_image: string
+    title: string
+    description: string
+  }
+  question: string[]
+}

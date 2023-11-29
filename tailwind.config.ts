@@ -4,38 +4,18 @@ const config: Config = {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
-      screens: {
-        '2xl': '1800px',
-        // => @media (min-width: 992px) { ... }
-      },
       colors: {
         C0C0C0: '#C0C0C0',
+        D9D9D9: '#D9D9D9',
       },
       fontSize: {
-        '10': [
-          '1rem',
-          {
-            lineHeight: '1.498rem',
-          },
-        ],
-        '11': [
-          '1.1rem',
-          {
-            lineHeight: '1.498rem',
-          },
-        ],
         '12': [
           '1.2rem',
           {
             lineHeight: '1.6rem',
           },
         ],
-        '14': [
-          '1.4rem',
-          {
-            lineHeight: '1.907rem',
-          },
-        ],
+
         '15': [
           '1.5rem',
           {
@@ -46,12 +26,6 @@ const config: Config = {
           '1.6rem',
           {
             lineHeight: '2.179rem',
-          },
-        ],
-        '17': [
-          '1.7rem',
-          {
-            lineHeight: '2.068rem',
           },
         ],
         '18': [
@@ -66,22 +40,16 @@ const config: Config = {
             lineHeight: '2.724rem',
           },
         ],
-        '23': [
-          '2.3rem',
-          {
-            lineHeight: '2.8rem',
-          },
-        ],
-        '25': [
-          '2.5rem',
-          {
-            lineHeight: '3.041rem',
-          },
-        ],
         '31': [
           '3.1rem',
           {
             lineHeight: '4.543rem',
+          },
+        ],
+        '35': [
+          '3.5rem',
+          {
+            lineHeight: '5.068rem',
           },
         ],
         '37': [
@@ -94,6 +62,12 @@ const config: Config = {
           '5.4rem',
           {
             lineHeight: '7.95rem',
+          },
+        ],
+        '60': [
+          '6rem',
+          {
+            lineHeight: '8.688rem',
           },
         ],
       },

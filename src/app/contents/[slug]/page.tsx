@@ -1,5 +1,6 @@
 import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
 import DownLoadButton from '@components/ui/download-button/DownLoadButton'
+import BannerSection from '@components/ui/section/BannerSection'
 import CSText from '@components/ui/text/CSText'
 import { getContentsData } from '@lib/data'
 
@@ -8,9 +9,9 @@ const Contents = ({ params }: any) => {
 
   return (
     <>
-      <div className="relative mt-[8.4rem] h-[50rem] px-[5rem] xl:h-[100%] xl:px-0">
+      <BannerSection>
         <AutoSizeImage src={data.banner.banner_image} full priority />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-[9rem]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
           <AutoSizeImage
             src={data.banner.dsp_image}
             className="h-[10rem] w-[18rem] xl:h-[14rem] xl:w-[25.4rem]"
@@ -19,7 +20,7 @@ const Contents = ({ params }: any) => {
             {data.banner.intro1}
           </CSText>
         </div>
-      </div>
+      </BannerSection>
       <div className="mx-auto flex justify-between gap-[3rem] py-[5.4rem] md:gap-[6.2rem]">
         <section className="w-[32rem] lg:w-[52rem]">
           <CSText size="18" color="white" weight="bold">

@@ -15,14 +15,14 @@ interface StringProps {
 }
 
 const borderRadius: StringProps = {
-  '1': 'rounded-[1rem]',
-  '2': 'rounded-[2rem]',
+  '10': 'rounded-[1rem]',
+  '20': 'rounded-[2rem]',
   '50%': 'rounded-[50%]',
 }
 
 const borderTopRadius: StringProps = {
-  '0.6': 'rounded-t-[0.6rem]',
-  1.8: 'rounded-t-[1.8rem]',
+  '6': 'rounded-t-[0.6rem]',
+  18: 'rounded-t-[1.8rem]',
 }
 const AutoSizeImage = ({
   src,
@@ -41,8 +41,8 @@ const AutoSizeImage = ({
           width={0}
           height={0}
           sizes="100%"
-          className={`h-full w-full ${
-            roundedTop ? borderTopRadius[roundedTop] : ''
+          className={`h-full w-full object-cover ${
+            roundedTop && borderTopRadius[roundedTop]
           }`}
           alt=""
           priority={priority}
@@ -50,14 +50,14 @@ const AutoSizeImage = ({
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0trSsBwACcgEmfgPGBAAAAABJRU5ErkJggg=="
         />
       ) : (
-        <div className={`relative ${className ?? ''}`} onClick={onClick}>
+        <div className={`relative ${className && className}`} onClick={onClick}>
           <Image
             src={src}
             fill
             sizes="100%"
-            className={`object-cover ${rounded ? borderRadius[rounded] : ''} ${
-              roundedTop ? borderTopRadius[roundedTop] : ''
-            } `}
+            className={`object-cover ${rounded && borderRadius[rounded]} ${
+              roundedTop && borderTopRadius[roundedTop]
+            }`}
             alt=""
             priority={priority}
             placeholder="blur"
