@@ -11,7 +11,7 @@ export default async function Home() {
   const userAgent = requestHeaders.get('user-agent')
 
   const deviceInfo = detectDevice(userAgent!)
-
+  console.log('env테스트')
   return (
     <>
       <Banner data={data.banner} />
