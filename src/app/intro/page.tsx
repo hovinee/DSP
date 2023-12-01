@@ -76,6 +76,15 @@ const Intro = () => {
               <CSText size="18" color="white" className="whitespace-pre-line">
                 {data.end.description}
               </CSText>
+              <CSButton
+                width="148"
+                height="45"
+                rounded="30"
+                color="fff"
+                className="mt-[2.5rem] text-21 font-bold text-[#383838]"
+              >
+                문의하기
+              </CSButton>
             </div>
           </div>
           <div className="lg:mx-auto lg:w-[81.3rem] xl:w-[95.1rem]">
