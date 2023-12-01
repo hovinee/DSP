@@ -4,7 +4,7 @@ import BannerSection from '@components/ui/section/BannerSection'
 import CSText from '@components/ui/text/CSText'
 import { getContentsData } from '@lib/data'
 
-const Contents = ({ params }: any) => {
+const Contents = async ({ params }: any) => {
   const data = getContentsData(params.slug)
 
   return (

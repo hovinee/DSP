@@ -1,32 +1,51 @@
 'use client'
 
+import { useState } from 'react'
 import CSButton from '../button/CSButton'
+import Spinner from '@components/spinner/Spinner'
 
 const DownLoadButton = () => {
-  const handleDownload = () => {
-    const filePath = '/dsp.zip' // 파일 경로
-    const publicUrl = process.env.NEXT_PUBLIC_BASE_URL // NEXT_PUBLIC_BASE_URL은 .env 파일에 설정되어 있어야 합니다.
-    const fileUrl = `${publicUrl}${filePath}`
+  const [loading, setLoading] = useState<boolean>(false)
+  const url = 'https://dsp.team3.workers.dev/dsp.zip'
 
-    // 이미지 다운로드
-    const link = document.createElement('a')
-    link.href = fileUrl
-    link.download = 'dsp.zip'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const downloadFile = async () => {
+    setLoading(true)
+    await fetch(url, { method: 'GET' })
+      .then((res) => {
+        return res.blob()
+      })
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = 'dsp'
+        document.body.appendChild(a)
+        a.click()
+        setTimeout((_) => {
+          window.URL.revokeObjectURL(url)
+        }, 60000)
+        a.remove()
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.error('err: ', err)
+      })
   }
+
   return (
-    <CSButton
-      onClick={handleDownload}
-      width="230"
-      height="45"
-      rounded="30"
-      color="fff"
-      className="text-21 font-bold text-[#383838]"
-    >
-      Download
-    </CSButton>
+    <>
+      <CSButton
+        onClick={downloadFile}
+        width="230"
+        height="45"
+        rounded="30"
+        color="fff"
+        className="text-21 font-bold text-[#383838]"
+      >
+        Download
+      </CSButton>
+      {loading && <Spinner />}
+    </>
   )
 }
 export default DownLoadButton

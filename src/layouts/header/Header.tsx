@@ -16,7 +16,7 @@ const Header = () => {
       : `${!sticky && 'absolute bg-transparent'} ${
           sticky && 'fixed bg-black shadow-2xl shadow-black'
         } inset-0 bottom-auto z-10 h-[8.4rem] pl-[9rem]`
-  console.log('env 수정')
+
   return (
     <>
       <header
