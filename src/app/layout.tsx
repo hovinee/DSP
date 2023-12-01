@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    images: '/images/main_banner.png',
+  },
 }
 
 const notoSansKr = Noto_Sans_KR({

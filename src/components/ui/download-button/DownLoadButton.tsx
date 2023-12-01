@@ -21,9 +21,6 @@ const DownLoadButton = () => {
         a.download = 'dsp'
         document.body.appendChild(a)
         a.click()
-        setTimeout((_) => {
-          window.URL.revokeObjectURL(url)
-        }, 60000)
         a.remove()
         setLoading(false)
       })
