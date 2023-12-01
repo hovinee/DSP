@@ -5,6 +5,7 @@ import { Noto_Sans_KR } from 'next/font/google'
 import Footer from '@layout/footer/Footer'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.labkid-industry.com/'),
   title: 'LaB KID Industry',
   description: '듀코젠 산업 메타버스 기반 랩키드 시리즈',
   icons: {
