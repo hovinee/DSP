@@ -8,13 +8,17 @@ import { easing } from 'maath'
 const SkyBox = () => {
   const { scene } = useThree()
   const loader = new THREE.CubeTextureLoader()
+
+  //cache
+  THREE.Cache.enabled = true
+
   const texture = loader.load([
-    '/images/cube/px.jpg',
-    '/images/cube/nx.jpg',
-    '/images/cube/py.jpg',
-    '/images/cube/ny.jpg',
-    '/images/cube/pz.jpg',
-    '/images/cube/nz.jpg',
+    '/images/cube/px.webp',
+    '/images/cube/nx.webp',
+    '/images/cube/py.webp',
+    '/images/cube/ny.webp',
+    '/images/cube/pz.webp',
+    '/images/cube/nz.webp',
   ])
 
   scene.background = texture
