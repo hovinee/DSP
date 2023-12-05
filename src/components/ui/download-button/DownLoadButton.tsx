@@ -2,31 +2,63 @@
 
 import { useState } from 'react'
 import CSButton from '../button/CSButton'
-import Spinner from '@components/spinner/Spinner'
+import axios from 'axios'
+import Progressbar from '@components/Progress-bar/ProgressBar'
 
 const DownLoadButton = () => {
   const [loading, setLoading] = useState<boolean>(false)
+  const [number, setNumber] = useState<number>(0)
   const url = 'https://dsp.team3.workers.dev/dsp.zip'
 
-  const downloadFile = async () => {
+  function throttle(callback: () => void, delay: number) {
+    let lastExecTime = 0
+
+    return function () {
+      const now = Date.now()
+
+      if (now - lastExecTime >= delay) {
+        callback()
+        lastExecTime = now
+      }
+    }
+  }
+
+  const downloadFile = async (): Promise<void> => {
     setLoading(true)
-    await fetch(url, { method: 'GET' })
-      .then((res) => {
-        return res.blob()
-      })
-      .then((blob) => {
-        const url = window.URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = url
-        a.download = 'dsp'
-        document.body.appendChild(a)
-        a.click()
-        a.remove()
-        setLoading(false)
-      })
-      .catch((err) => {
-        console.error('err: ', err)
-      })
+    try {
+      await axios
+        .get(url, {
+          responseType: 'blob',
+          onDownloadProgress: (progressEvent) => {
+            // 프로그레스 이벤트 처리
+            const progress = (progressEvent.loaded / progressEvent.total!) * 100
+            const throttleUpdate = throttle(() => {
+              // UI 업데이트 등 원하는 작업 수행
+              setNumber(progress)
+            }, 500) // 500ms 간격으로 업데이트
+            throttleUpdate()
+          },
+        })
+        .then((res) => {
+          // 데이터와 MIME 타입을 사용하여 Blob 생성
+          const blob = new Blob([res.data], {
+            type: res.headers['content-type'],
+          })
+
+          // Blob을 사용하여 다운로드 링크 생성
+          const url = window.URL.createObjectURL(blob)
+          const a = document.createElement('a')
+          a.href = url
+          a.download = 'dsp' // 다운로드될 파일 이름 지정
+          document.body.appendChild(a)
+          a.click()
+          a.remove()
+          setLoading(false)
+          setNumber(0)
+        })
+    } catch (error) {
+      console.error('Error:', error)
+    }
   }
 
   return (
@@ -41,7 +73,8 @@ const DownLoadButton = () => {
       >
         Download
       </CSButton>
-      {loading && <Spinner />}
+
+      {loading && <Progressbar number={number} />}
     </>
   )
 }

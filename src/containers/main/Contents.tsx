@@ -8,16 +8,17 @@ import CSText from '@components/ui/text/CSText'
 import { Main } from '@utils/types'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useDeviceContext } from '@contexts/DeviceProvider'
 
 type ContentsProps = Omit<Main, 'banner'>
 
 interface Props {
   data: ContentsProps['contents']
-  deviceInfo: string
 }
 
-const Contents = ({ data, deviceInfo }: Props) => {
+const Contents = ({ data }: Props) => {
   const router = useRouter()
+  const { deviceInfo } = useDeviceContext()
 
   const [isHover, setIsHover] = useState<boolean>(false)
   const [isHoverIndex, setIsHoverIndex] = useState<number | null>(null)

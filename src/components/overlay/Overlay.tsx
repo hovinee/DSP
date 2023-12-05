@@ -7,7 +7,7 @@ interface Props {
 const Overlay = ({ children }: Props) => {
   return (
     <div className="fixed inset-0 z-10 flex flex-col items-center justify-center">
-      <div className="modal-overlay absolute inset-0 bg-black opacity-50" />
+      <div className="absolute inset-0 bg-black opacity-50" />
       {children}
     </div>
   )

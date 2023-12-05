@@ -3,6 +3,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans_KR } from 'next/font/google'
 import Footer from '@layout/footer/Footer'
+import { headers } from 'next/headers'
+import { detectDevice } from '@utils/method'
+import clsx from 'clsx'
+import DeviceProvider from '@contexts/DeviceProvider'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.labkid-industry.com/'),
@@ -17,9 +21,8 @@ export const metadata: Metadata = {
 }
 
 const notoSansKr = Noto_Sans_KR({
-  // preload: true, 기본값
-  subsets: ['latin'], // 또는 preload: false
-  weight: ['100', '400', '700', '900'], // 가변 폰트가 아닌 경우, 사용할 fontWeight 배열
+  subsets: ['latin'],
+  weight: ['100', '400', '700', '900'],
   display: 'swap',
 })
 
@@ -28,12 +31,18 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const requestHeaders = headers()
+  const userAgent = requestHeaders.get('user-agent')
+  const deviceInfo = detectDevice(userAgent!)
+
   return (
     <html lang="en">
-      <body className={`flex flex-col bg-black ${notoSansKr.className}`}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={clsx('flex flex-col bg-black', notoSansKr.className)}>
+        <DeviceProvider deviceInfo={deviceInfo}>
+          <Header />
+          {children}
+          <Footer />
+        </DeviceProvider>
       </body>
     </html>
   )
