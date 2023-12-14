@@ -1,3 +1,4 @@
+import SwiperSlider from '@components/swiper/SwiperSlider'
 import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
 import DownLoadButton from '@components/ui/download-button/DownLoadButton'
 import BannerSection from '@components/ui/section/BannerSection'
@@ -60,13 +61,7 @@ const Contents = async ({ params }: any) => {
           </CSText>
         </div>
       </BannerSection>
-      <div className="grid w-full grid-cols-5">
-        {videoSource1.src && <Video {...args} sources={videoSource1} />}
-        {videoSource2.src && <Video {...args} sources={videoSource2} />}
-        {videoSource3.src && <Video {...args} sources={videoSource3} />}
-        {videoSource4.src && <Video {...args} sources={videoSource4} />}
-        {videoSource5.src && <Video {...args} sources={videoSource5} />}
-      </div>
+
       <div className="mx-auto flex justify-between gap-[3rem] py-[5.4rem] md:gap-[6.2rem]">
         <section className="w-[32rem] lg:w-[52rem]">
           <CSText size="18" color="white" weight="bold">
@@ -91,7 +86,7 @@ const Contents = async ({ params }: any) => {
               {data.end}
             </CSText>
           </div>
-          <div className="mt-[5.4rem] whitespace-pre-line">
+          {/* <div className="mt-[5.4rem] whitespace-pre-line">
             <div className="border-t border-t-white/20 py-[5.4rem]">
               <div className="flex gap-[1.8rem]">
                 <div className="w-[4.5rem]">
@@ -162,7 +157,7 @@ const Contents = async ({ params }: any) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <aside className="h-[25rem] w-[27rem] rounded-[1rem] border border-white/20 ">
@@ -185,6 +180,34 @@ const Contents = async ({ params }: any) => {
             </div>
           </div>
         </aside>
+      </div>
+      <div className="px-[1rem]">
+        <CSText
+          size="21"
+          color="white"
+          weight="bold"
+          className="mt-[1.5rem] pl-[4rem]"
+        >
+          DSP 이미지 갤러리
+        </CSText>
+        <SwiperSlider />
+      </div>
+      <div className="px-[1rem]">
+        <CSText
+          size="21"
+          color="white"
+          weight="bold"
+          className="mb-[4rem] mt-[3rem] pl-[4rem]"
+        >
+          DSP Video
+        </CSText>
+        <div className="mb-[2rem] grid w-full grid-cols-3 gap-[1rem]">
+          {videoSource1.src && <Video {...args} sources={videoSource1} />}
+          {videoSource2.src && <Video {...args} sources={videoSource2} />}
+          {videoSource3.src && <Video {...args} sources={videoSource3} />}
+          {videoSource4.src && <Video {...args} sources={videoSource4} />}
+          {videoSource5.src && <Video {...args} sources={videoSource5} />}
+        </div>
       </div>
     </>
   )

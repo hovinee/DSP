@@ -5,6 +5,7 @@ import CSText from '@components/ui/text/CSText'
 import { useSticky } from '@hooks'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Nav from './Nav'
 
 const Header = () => {
   const { sticky, measuredRef } = useSticky()
@@ -29,11 +30,14 @@ const Header = () => {
             className="h-[2.67rem] w-[12rem]"
           />
         </Link>
-        <Link href={'/intro'}>
-          <CSText size="18" color="white hover:D9D9D9" weight="semiBold">
-            · LABKID Industry 란?
-          </CSText>
-        </Link>
+        <div className="flex gap-[3rem]">
+          <Link href={'/intro'}>
+            <CSText size="18" color="white hover:D9D9D9" weight="semiBold">
+              · LABKID Industry 란?
+            </CSText>
+          </Link>
+          <Nav />
+        </div>
       </header>
     </>
   )

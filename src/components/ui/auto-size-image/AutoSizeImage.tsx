@@ -43,7 +43,7 @@ const AutoSizeImage = ({
           sizes="100%"
           className={`h-full w-full object-cover ${
             roundedTop && borderTopRadius[roundedTop]
-          }`}
+          } ${rounded && borderRadius[rounded]}`}
           alt=""
           priority={priority}
           placeholder="blur"
