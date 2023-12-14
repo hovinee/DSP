@@ -60,7 +60,7 @@ const Intro = () => {
               </div>
               <AutoSizeImage
                 src={intro_image}
-                className={`mt-[2.1rem] h-[28.8rem] w-full ${
+                className={`h-[28.8rem] w-full ${
                   index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'
                 } lg:top-0 lg:h-[18.5rem] lg:w-[36.5rem] xl:h-[21.5rem] xl:w-[42.3rem]`}
                 rounded="10"
