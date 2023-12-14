@@ -28,47 +28,14 @@ const Banner = ({ data }: Props) => {
         <CSText size="37 xl:54" weight="bold" color="white">
           {data.intro2}
         </CSText>
-        <div className="flex gap-[10rem]">
-          <CSText
-            size="15 xl:23"
-            color="white"
-            className="mt-[1.5rem] whitespace-pre-line xl:mt-[2.3rem]"
-          >
-            {data.intro3}
-          </CSText>
-          <div className="flex flex-col">
-            <CSText
-              size="15 xl:23"
-              color="white"
-              className="mt-[1.5rem] whitespace-pre-line xl:mt-[2.3rem]"
-            >
-              - 로컬라이제이션 (한/영 변환)
-            </CSText>
-            <CSText
-              size="15 xl:23"
-              color="white"
-              className="whitespace-pre-line"
-            >
-              - 웹뷰 (메타버스 안에서 발표자료 가져오기 및 메타버스 강의 등 활용
-              가능)
-            </CSText>
-            <CSText
-              size="15 xl:23"
-              color="white"
-              className="whitespace-pre-line "
-            >
-              - 3D 오브젝트 불러오기 (스페이셜IO 처럼 가져오는 공간에 필요한
-              에셋들을 추가)
-            </CSText>
-            <CSText
-              size="15 xl:23"
-              color="white"
-              className="whitespace-pre-line "
-            >
-              - 공간 커스텀 기능
-            </CSText>
-          </div>
-        </div>
+
+        <CSText
+          size="15 xl:23"
+          color="white"
+          className="mt-[1.5rem] whitespace-pre-line xl:mt-[2.3rem]"
+        >
+          {data.intro3}
+        </CSText>
       </div>
     </div>
   )
