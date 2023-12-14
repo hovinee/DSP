@@ -188,6 +188,17 @@ const Contents = async ({ params }: any) => {
           weight="bold"
           className="mt-[1.5rem] pl-[4rem]"
         >
+          DSP 기능 정의서
+        </CSText>
+        <SwiperSlider skill />
+      </div>
+      <div className="px-[1rem]">
+        <CSText
+          size="21"
+          color="white"
+          weight="bold"
+          className="mt-[1.5rem] pl-[4rem]"
+        >
           DSP 이미지 갤러리
         </CSText>
         <SwiperSlider />
