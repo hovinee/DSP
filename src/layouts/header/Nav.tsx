@@ -20,7 +20,7 @@ const Nav = () => {
       </CSText>
       {openModal && (
         <Overlay>
-          <div className="bg relative z-10 w-1/4">
+          <div className="bg relative z-10 w-[50rem]">
             <div className="absolute right-[2rem] top-[2rem]">
               <AutoSizeImage
                 src={'/images/cancel.png'}

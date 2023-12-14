@@ -23,6 +23,7 @@ const SwiperSlider = ({ skill }: TProps) => {
   const [openModal, setOpenModal] = useState<boolean>(false)
   const [imagekey, setImagekey] = useState<number>(0)
   SwiperCore.use([Navigation, Scrollbar])
+
   const imageData = [
     '/images/still/still1_1.png',
     '/images/still/still1_2.png',
