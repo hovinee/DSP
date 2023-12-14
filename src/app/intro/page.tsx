@@ -13,13 +13,20 @@ const Intro = () => {
       <BannerSection>
         <div className="relative h-full w-full">
           <AutoSizeImage src={data.banner.banner_image} full priority />
-          <div className="absolute inset-0 flex flex-col justify-center pl-[5rem] lg:mx-auto lg:w-[81.3rem] lg:pl-0 xl:w-[95.1rem]">
+          <div className="absolute inset-0 flex flex-col justify-center px-[5rem] lg:mx-auto lg:w-[81.3rem] lg:pl-0 xl:w-[95.1rem]">
             <CSText size="60" color="white" weight="bold">
               {data.banner.title}
             </CSText>
-            <div className="mt-[1rem] w-[51rem]">
+            <div className="w- mt-[1rem]">
               <CSText size="18" color="white">
-                {data.banner.intro}
+                {
+                  'labkid-industry는 메타버스 플랫폼으로, 가상 및 증강 현실을  활용하여 공간적 협업을 가능하게 합니다. 주요 사업 모델은 가입 및 서비스 요금, 기업 솔루션, 이벤트 호스팅 및 스폰서십, 콘텐츠 판매 및 마켓플레이스, 파트너십 및 협업을 포함하며, 이를 통해 다양한 수익원을 창출합니다. '
+                }
+              </CSText>
+              <CSText size="18" color="white" className="mt-[1rem]">
+                {
+                  '사용자들은 플랫폼 접근을 위해 구독료를 할 수 있으며, 추가 기능이나 더 발전된 협업 도구에 대해서는 추가 요금이 부과될 수 있습니다. labkid-industry는 기업 고객을 대상으로 맞춤형 가상 회의실, 팀워크 공간 및 교육 프로그램을 제공하여 수익을 창출합니다. 이는 원격 근무 및 교육에 특히 중요한 부분입니다.'
+                }
               </CSText>
               <CSButton
                 width="148"

@@ -49,7 +49,7 @@ const Contents = ({ data }: Props) => {
   }, [divRef.current?.offsetHeight])
 
   return (
-    <div className="grid w-full grid-cols-2 gap-x-[1rem] gap-y-[3rem] px-[4rem] pb-[9rem] md:grid-cols-3 xl:mt-[-15rem] xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
+    <div className="grid w-full grid-cols-1 gap-x-[1rem] gap-y-[3rem] px-[4rem] pb-[9rem] sm:grid-cols-2 md:grid-cols-3 xl:mt-[-15rem] xl:grid-cols-4 xl:gap-y-[5rem] xl:px-[9rem]">
       {deviceInfo === 'Windows' ? (
         <>
           {data.map((value, index) => {

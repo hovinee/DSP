@@ -19,11 +19,12 @@ const fontSize: StringProps = {
   '21': 'text-21',
   '35': 'text-35',
   '60': 'text-60',
+  '12 md:18': 'text-15 md:text-18',
   '12 xl:14': 'text-12 xl:text-14',
   '12 xl:18': 'text-12 xl:text-18',
-  '15 xl:23': 'text-15 xl:text-23',
-  '21 xl:31': 'text-21 xl:text-31',
-  '37 xl:54': 'text-37 xl:text-54',
+  '12 md:15 xl:23': 'text-12 md:text-15 xl:text-23',
+  '15 md:21 xl:31': 'text-15 md:text-21 xl:text-31',
+  '16 md:37 xl:54': 'text-16 md:text-37 xl:text-54',
 }
 
 const fontColor: StringProps = {

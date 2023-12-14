@@ -202,11 +202,36 @@ const Contents = async ({ params }: any) => {
           DSP 비디오 갤러리
         </CSText>
         <div className="mb-[2rem] grid w-full grid-cols-3 gap-[1rem]">
-          {videoSource1.src && <Video {...args} sources={videoSource1} />}
-          {videoSource2.src && <Video {...args} sources={videoSource2} />}
-          {videoSource3.src && <Video {...args} sources={videoSource3} />}
-          {videoSource4.src && <Video {...args} sources={videoSource4} />}
-          {videoSource5.src && <Video {...args} sources={videoSource5} />}
+          <div>
+            <CSText size="18" color="white" weight="bold" className="mb-[2rem]">
+              소재 적용 전시관
+            </CSText>
+            {videoSource1.src && <Video {...args} sources={videoSource1} />}
+          </div>
+          <div>
+            <CSText size="18" color="white" weight="bold" className="mb-[2rem]">
+              브랜드 전시관
+            </CSText>
+            {videoSource2.src && <Video {...args} sources={videoSource2} />}
+          </div>
+          <div>
+            <CSText size="18" color="white" weight="bold" className="mb-[2rem]">
+              생산기술 전시관
+            </CSText>
+            {videoSource3.src && <Video {...args} sources={videoSource3} />}
+          </div>
+          <div>
+            <CSText size="18" color="white" weight="bold" className="mb-[2rem]">
+              광장
+            </CSText>
+            {videoSource4.src && <Video {...args} sources={videoSource4} />}
+          </div>
+          <div>
+            <CSText size="18" color="white" weight="bold" className="mb-[2rem]">
+              회사 소개관
+            </CSText>
+            {videoSource5.src && <Video {...args} sources={videoSource5} />}
+          </div>
         </div>
       </div>
     </>

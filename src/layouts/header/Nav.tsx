@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <>
       <CSText
-        size="18"
+        size="12 md:18"
         color="white hover:D9D9D9"
         weight="semiBold"
         className="cursor-pointer"
@@ -21,7 +21,7 @@ const Nav = () => {
       {openModal && (
         <Overlay>
           <div className="bg relative z-10 w-1/4">
-            <div className="absolute right-0 top-[-4rem]">
+            <div className="absolute right-[2rem] top-[2rem]">
               <AutoSizeImage
                 src={'/images/cancel.png'}
                 className="h-[3rem] w-[3rem] cursor-pointer"

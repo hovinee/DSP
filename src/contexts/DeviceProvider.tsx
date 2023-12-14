@@ -8,7 +8,7 @@ const DeviceContext = createContext<{ deviceInfo: string }>({
 })
 
 const DeviceProvider = ({ children, deviceInfo }: any) => {
-  if (deviceInfo === 'Mobile') return <MobileModal />
+  // if (deviceInfo === 'Mobile') return <MobileModal />
   return (
     <DeviceContext.Provider value={{ deviceInfo }}>
       {children}
