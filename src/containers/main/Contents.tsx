@@ -56,7 +56,7 @@ const Contents = ({ data }: Props) => {
             return (
               <motion.div
                 onClick={() =>
-                  value.title === 'DSP' && router.push('/contents/dsp')
+                  value.title === 'DSP' && router.replace('/contents/dsp')
                 }
                 className="relative cursor-pointer"
                 key={index}
