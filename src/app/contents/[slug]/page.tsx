@@ -26,23 +26,23 @@ const Contents = async ({ params }: any) => {
   const videoData5 = await getVideoData('894337218')
 
   const videoSource1 = {
-    src: videoData1.play.hls.link,
+    src: videoData1?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
   const videoSource2 = {
-    src: videoData2.play.hls.link,
+    src: videoData2?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
   const videoSource3 = {
-    src: videoData3.play.hls.link,
+    src: videoData3?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
   const videoSource4 = {
-    src: videoData4.play.hls.link,
+    src: videoData4?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
   const videoSource5 = {
-    src: videoData5.play.hls.link,
+    src: videoData5?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
 
