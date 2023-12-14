@@ -51,7 +51,7 @@ const Intro = () => {
                   index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'
                 } lg:w-[39rem] xl:w-[47rem]`}
               >
-                <CSText size="35" color="white">
+                <CSText size="35" color="white" className="whitespace-pre-line">
                   {title}
                 </CSText>
                 <CSText size="15" color="white" className="mt-[2.1rem]">
