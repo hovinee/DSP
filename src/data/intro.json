@@ -8,17 +8,17 @@
     {
       "title": "아바타 생성",
       "description": "사용자는 자신의 가상 대표인 '아바타'를 만들 수 있습니다. 개인의 정체성과 취향을 표현하는 수단으로 기능합니다. 사용자는 이 아바타를 통해 메타버스 내에서 소셜 활동을 하고 다른 사용자들과 상호 작용합니다.",
-      "intro_image": "/images/intro/intro_1.png"
+      "intro_image": "/images/intro/intro_2.png"
     },
     {
       "title": "커뮤니케이션",
       "description": "사용자들은 가상 공간에서 실시간으로 상호 작용하며, 효과적인 의사소통을 할 수 있습니다. 또한, 이러한 커뮤니케이션 방식은 자연스러운 사회적 교류를 가능하게 합니다.",
-      "intro_image": "/images/intro/intro_2.png"
+      "intro_image": "/images/intro/intro_3.png"
     },
     {
       "title": "미디어 뷰어",
       "description": "가상 회의실에서 비디오를 시청하거나, PDF 문서를 함께 검토하고, 이미지 갤러리를 구경하는 것이 가능합니다. 이 기능은 교육, 업무, 또는 여가 활동에서 중요한 역할을 합니다.",
-      "intro_image": "/images/intro/intro_3.png"
+      "intro_image": "/images/intro/intro_1.png"
     },
     {
       "title": "환경 상호작용 및\n 애니메이션",
