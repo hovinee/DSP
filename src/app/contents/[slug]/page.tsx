@@ -2,11 +2,49 @@ import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
 import DownLoadButton from '@components/ui/download-button/DownLoadButton'
 import BannerSection from '@components/ui/section/BannerSection'
 import CSText from '@components/ui/text/CSText'
+import Video from '@components/video/Video'
 import { getContentsData } from '@lib/data'
+import { getVideoData } from '@lib/video_data'
+
+const args = {
+  styles: {
+    width: '100%',
+    aspectRatio: '16 / 9',
+  },
+  videoOptions: {
+    controls: true,
+    autoplay: false,
+  },
+}
 
 const Contents = async ({ params }: any) => {
   const data = getContentsData(params.slug)
+  const videoData1 = await getVideoData('894337192')
+  const videoData2 = await getVideoData('894337178')
+  const videoData3 = await getVideoData('894337154')
+  const videoData4 = await getVideoData('894337122')
+  const videoData5 = await getVideoData('894337218')
 
+  const videoSource1 = {
+    src: videoData1.play.hls.link,
+    type: 'application/x-mpegURL',
+  }
+  const videoSource2 = {
+    src: videoData2.play.hls.link,
+    type: 'application/x-mpegURL',
+  }
+  const videoSource3 = {
+    src: videoData3.play.hls.link,
+    type: 'application/x-mpegURL',
+  }
+  const videoSource4 = {
+    src: videoData4.play.hls.link,
+    type: 'application/x-mpegURL',
+  }
+  const videoSource5 = {
+    src: videoData5.play.hls.link,
+    type: 'application/x-mpegURL',
+  }
   return (
     <>
       <BannerSection>
@@ -21,6 +59,13 @@ const Contents = async ({ params }: any) => {
           </CSText>
         </div>
       </BannerSection>
+      <div className="grid w-full grid-cols-5">
+        <Video {...args} sources={videoSource1} />
+        <Video {...args} sources={videoSource2} />
+        <Video {...args} sources={videoSource3} />
+        <Video {...args} sources={videoSource4} />
+        <Video {...args} sources={videoSource5} />
+      </div>
       <div className="mx-auto flex justify-between gap-[3rem] py-[5.4rem] md:gap-[6.2rem]">
         <section className="w-[32rem] lg:w-[52rem]">
           <CSText size="18" color="white" weight="bold">
