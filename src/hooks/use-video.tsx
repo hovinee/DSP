@@ -49,7 +49,7 @@ const useVideo = ({ options, videoTarget, plugins = [] }: VideoProps) => {
           const totalDuration = player.duration()
 
           console.log('Total Duration:', totalDuration)
-          player.currentTime(50)
+          //   player.currentTime(50)
         })
         player.on('loadedmetadata', handletotalDuration)
       },
