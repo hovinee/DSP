@@ -200,7 +200,16 @@ const Contents = async ({ params }: any) => {
             >
               소재 적용 전시관
             </CSText>
-
+            <CSText
+              size="15"
+              color="white"
+              weight="bold"
+              className="mb-[2rem] pl-[1rem]"
+            >
+              사용자 인터페이스(UI)를 통해 각 제품의 물질적 특성(머티리얼)을
+              변경해볼 수 있어, 제품의 다양한 측면을 직접 체험하고 이해할 수
+              있습니다.
+            </CSText>
             {videoSource1.src && <Video {...args} sources={videoSource1} />}
           </div>
           <div>
@@ -211,6 +220,15 @@ const Contents = async ({ params }: any) => {
               className="mb-[2rem] pl-[1rem]"
             >
               브랜드 전시관
+            </CSText>
+            <CSText
+              size="15"
+              color="white"
+              weight="bold"
+              className="mb-[2rem] pl-[1rem]"
+            >
+              제품들을 회전시키거나 확대하여 자세히 살펴볼 수 있으며, 제품의
+              기능과 디자인을 직접 체험할 수 있습니다.
             </CSText>
             {videoSource2.src && <Video {...args} sources={videoSource2} />}
           </div>
@@ -223,6 +241,15 @@ const Contents = async ({ params }: any) => {
             >
               생산기술 전시관
             </CSText>
+            <CSText
+              size="15"
+              color="white"
+              weight="bold"
+              className="mb-[2rem] pl-[1rem]"
+            >
+              가상의 팩토리 투어를 통해 제조 과정을 직접 볼 수 있습니다. 또한
+              생산 기술의 세부 사항을 이해할 수 있습니다.
+            </CSText>
             {videoSource3.src && <Video {...args} sources={videoSource3} />}
           </div>
           <div>
@@ -234,6 +261,15 @@ const Contents = async ({ params }: any) => {
             >
               광장
             </CSText>
+            <CSText
+              size="15"
+              color="white"
+              weight="bold"
+              className="mb-[2rem] pl-[1rem]"
+            >
+              다목적 사회 공간. 대화 및 네트워킹의 장소이며 메타버스 내의
+              중심적인 모임 장소로 기능합니다.
+            </CSText>
             {videoSource4.src && <Video {...args} sources={videoSource4} />}
           </div>
           <div>
@@ -244,6 +280,14 @@ const Contents = async ({ params }: any) => {
               className="mb-[2rem] pl-[1rem]"
             >
               회사 소개관
+            </CSText>
+            <CSText
+              size="15"
+              color="white"
+              weight="bold"
+              className="mb-[2rem] pl-[1rem]"
+            >
+              회사 정보를 관람 및 추출. 방문자에게 심층적 이해를 제공합니다.
             </CSText>
             {videoSource5.src && <Video {...args} sources={videoSource5} />}
           </div>
@@ -258,6 +302,7 @@ const Contents = async ({ params }: any) => {
         >
           DSP 기능 정의서
         </CSText>
+
         <SwiperSlider skill />
       </div>
       <div className="mb-[2rem] mt-[1rem] px-[1rem]">

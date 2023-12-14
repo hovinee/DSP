@@ -25,6 +25,9 @@ const SwiperSlider = ({ skill }: TProps) => {
   SwiperCore.use([Navigation, Scrollbar])
 
   const imageData = [
+    '/images/still/dubai.png',
+    '/images/still/dubai2.png',
+    '/images/still/dubai3.png',
     '/images/still/still1_1.png',
     '/images/still/still1_2.png',
     '/images/still/still1_3.png',
