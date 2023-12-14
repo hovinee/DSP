@@ -199,7 +199,7 @@ const Contents = async ({ params }: any) => {
           weight="bold"
           className="mb-[4rem] mt-[3rem] pl-[4rem]"
         >
-          DSP Video
+          DSP 비디오 갤러리
         </CSText>
         <div className="mb-[2rem] grid w-full grid-cols-3 gap-[1rem]">
           {videoSource1.src && <Video {...args} sources={videoSource1} />}
