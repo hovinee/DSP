@@ -45,6 +45,7 @@ const Contents = async ({ params }: any) => {
     src: videoData5.play.hls.link,
     type: 'application/x-mpegURL',
   }
+
   return (
     <>
       <BannerSection>
@@ -60,11 +61,11 @@ const Contents = async ({ params }: any) => {
         </div>
       </BannerSection>
       <div className="grid w-full grid-cols-5">
-        <Video {...args} sources={videoSource1} />
-        <Video {...args} sources={videoSource2} />
-        <Video {...args} sources={videoSource3} />
-        <Video {...args} sources={videoSource4} />
-        <Video {...args} sources={videoSource5} />
+        {videoSource1.src && <Video {...args} sources={videoSource1} />}
+        {videoSource2.src && <Video {...args} sources={videoSource2} />}
+        {videoSource3.src && <Video {...args} sources={videoSource3} />}
+        {videoSource4.src && <Video {...args} sources={videoSource4} />}
+        {videoSource5.src && <Video {...args} sources={videoSource5} />}
       </div>
       <div className="mx-auto flex justify-between gap-[3rem] py-[5.4rem] md:gap-[6.2rem]">
         <section className="w-[32rem] lg:w-[52rem]">
