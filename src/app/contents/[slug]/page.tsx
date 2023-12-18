@@ -46,7 +46,7 @@ const Contents = async ({ params }: any) => {
     src: videoData5?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
-
+  console.log(videoData1)
   return (
     <>
       <BannerSection>
