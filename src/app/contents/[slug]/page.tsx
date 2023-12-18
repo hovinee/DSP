@@ -192,7 +192,7 @@ const Contents = async ({ params }: any) => {
               color="fff"
               className="mx-auto mt-[2rem] text-21 font-bold text-[#383838]"
             >
-              PPT DOCS
+              성과 측정 브리핑
             </CSButton>
           </Link>
         </div>
