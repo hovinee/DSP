@@ -189,10 +189,10 @@ const Contents = async ({ params }: any) => {
           10월 NCC 사내 공정불량율: 2.02%
         </div>
         <AutoSizeImage src={'/images/october.png'} full />
-        <div className="my-[2rem] text-31 text-green-600">
+        <div className="my-[2rem] text-21 text-white">
           11월 NCC 사내 공정불량율: 1.50%
         </div>
-        <div className="my-[1rem] text-18 text-white">
+        <div className="my-[1rem] text-21 text-green-600">
           {
             '▶ 품질 공정불량율(감소율): 사업 전(콘텐츠 활용 이전) 10월 2.02% > 사업 후(콘텐츠 활용 이후) 11월 1.50% 로 감소.'
           }
