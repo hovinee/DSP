@@ -18,7 +18,7 @@ export const sendValidationMailTo = (email: string, code: number) => {
     requireTLS: true,
     auth: {
       user: 'kkpark@ducowise.com',
-      pass: process.env.EMAIL_PW,
+      pass: process.env.NEXT_PUBLIC_EMAIL_PW,
     },
     options: mailOptions,
   }).sendMail(mailOptions)

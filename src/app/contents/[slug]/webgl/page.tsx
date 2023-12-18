@@ -5,7 +5,13 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { cfWorkerUrl } from '@utils/url'
 import Overlay from '@components/overlay/Overlay'
 
-const UnityWebgl = () => {
+const Anneagram = () => {
+  const [loading, setLoading] = useState<boolean>(true)
+  const handleGameOver = useCallback((data: any) => {
+    console.log('??')
+    setLoading(false)
+  }, [])
+
   const {
     unityProvider,
     addEventListener,
@@ -14,22 +20,22 @@ const UnityWebgl = () => {
     isLoaded,
     sendMessage,
   } = useUnityContext({
-    loaderUrl: `${cfWorkerUrl}/Test/Build_Web.loader.js`,
-    dataUrl: `${cfWorkerUrl}/Test/Build_Web.data`,
-    frameworkUrl: `${cfWorkerUrl}/Test/Build_Web.framework.js`,
-    codeUrl: `${cfWorkerUrl}/Test/Build_Web.wasm`,
+    loaderUrl: `${cfWorkerUrl}/Build/Build_Web.loader.js`,
+    dataUrl: `${cfWorkerUrl}/Build/Build_Web.data`,
+    frameworkUrl: `${cfWorkerUrl}/Build/Build_Web.framework.js`,
+    codeUrl: `${cfWorkerUrl}/Build/Build_Web.wasm`,
   })
 
-  // useEffect(() => {
-  //   addEventListener('OnSplashEnd', handleGameOver)
-  //   return () => {
-  //     removeEventListener('OnSplashEnd', handleGameOver)
-  //   }
-  // }, [addEventListener, removeEventListener, handleGameOver])
+  useEffect(() => {
+    addEventListener('OnSplashEnd', handleGameOver)
+    return () => {
+      removeEventListener('OnSplashEnd', handleGameOver)
+    }
+  }, [addEventListener, removeEventListener, handleGameOver])
 
   return (
     <div className="absolute inset-0 z-10 h-screen w-full bg-black">
-      {!isLoaded && (
+      {!isLoaded && loading && (
         <Overlay>
           <p className="z-20 text-21 text-white">
             Loading Application... {Math.round(loadingProgression * 100)}%
@@ -50,4 +56,4 @@ const UnityWebgl = () => {
   )
 }
 
-export default UnityWebgl
+export default Anneagram
