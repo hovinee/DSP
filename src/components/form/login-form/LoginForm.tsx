@@ -11,6 +11,7 @@ import CSButton from '@components/ui/button/CSButton'
 import CSInput from '@components/ui/input/CSInput'
 import CSLabel from '@components/ui/label/CSLabel'
 import CSText from '@components/ui/text/CSText'
+import Loading from '@components/loading/Loading'
 
 const SignInForm = () => {
   const router = useRouter()
@@ -21,9 +22,12 @@ const SignInForm = () => {
 
   const [watchEnabled, setWatchEnabled] = useState<boolean>(false)
 
+  //로딩
+  const [loading, setLoading] = useState<boolean>(false)
+
   const handleSumit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
+    setLoading(true)
     try {
       const res = await signIn('credentials', {
         email,
@@ -35,10 +39,12 @@ const SignInForm = () => {
         return
       }
       if (res && res.ok) {
+        setLoading(false)
         alert('로그인 되었습니다')
         router.replace('/')
       }
     } catch (error) {
+      setLoading(false)
       console.log(error)
     }
   }
@@ -114,6 +120,7 @@ const SignInForm = () => {
           </CSText>
         </Link>
       </form>
+      {loading && <Loading />}
     </Section>
   )
 }

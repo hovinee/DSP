@@ -6,6 +6,7 @@ import { useSticky } from '@hooks'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Nav from './Nav'
+import { signOut, useSession } from 'next-auth/react'
 
 const Header = () => {
   const { sticky, measuredRef } = useSticky()
@@ -18,6 +19,11 @@ const Header = () => {
           sticky && 'fixed bg-black shadow-2xl shadow-black'
         } inset-0 bottom-auto z-10 h-[8.4rem] px-[2rem] md:px-[9rem]`
 
+  const { data: session } = useSession()
+
+  const handleLogout = () => {
+    signOut()
+  }
   return (
     <>
       <header
@@ -44,12 +50,27 @@ const Header = () => {
             <Nav />
           </div>
         </div>
-
-        <Link href={'/auth/login'}>
-          <CSText size="12 md:18" color="white hover:D9D9D9" weight="semiBold">
-            로그인
+        {session?.user ? (
+          <CSText
+            size="12 md:18"
+            color="white hover:D9D9D9"
+            weight="semiBold"
+            className="cursor-pointer"
+            onClick={handleLogout}
+          >
+            로그아웃
           </CSText>
-        </Link>
+        ) : (
+          <Link href={'/auth/login'}>
+            <CSText
+              size="12 md:18"
+              color="white hover:D9D9D9"
+              weight="semiBold"
+            >
+              로그인
+            </CSText>
+          </Link>
+        )}
       </header>
     </>
   )

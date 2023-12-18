@@ -3,13 +3,14 @@
 import { Unity, useUnityContext } from 'react-unity-webgl'
 import React, { useState, useEffect, useCallback } from 'react'
 import { cfWorkerUrl } from '@utils/url'
-import Overlay from '@components/overlay/Overlay'
+import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
+import Progressbar from '@components/Progress-bar/ProgressBar'
 
 const Anneagram = () => {
-  const [loading, setLoading] = useState<boolean>(true)
+  const [load, setLoad] = useState<boolean>(false)
   const handleGameOver = useCallback((data: any) => {
     console.log('??')
-    setLoading(false)
+    setLoad(true)
   }, [])
 
   const {
@@ -34,25 +35,26 @@ const Anneagram = () => {
   }, [addEventListener, removeEventListener, handleGameOver])
 
   return (
-    <div className="absolute inset-0 z-10 h-screen w-full bg-black">
-      {!isLoaded && loading && (
-        <Overlay>
-          <p className="z-20 text-21 text-white">
-            Loading Application... {Math.round(loadingProgression * 100)}%
-          </p>
-        </Overlay>
-      )}
+    <>
+      <div className="absolute inset-0 z-10 h-screen w-full bg-black">
+        {!isLoaded && (
+          <div className="fixed z-20 h-full w-full">
+            <AutoSizeImage src={'/images/unity_bg.png'} full priority />
+            <Progressbar number={Math.round(loadingProgression * 100)} />
+          </div>
+        )}
 
-      <Unity
-        style={{
-          width: '100%',
-          height: '100%',
-          justifySelf: 'center',
-          alignSelf: 'center',
-        }}
-        unityProvider={unityProvider}
-      />
-    </div>
+        <Unity
+          style={{
+            width: '100%',
+            height: '100%',
+            justifySelf: 'center',
+            alignSelf: 'center',
+          }}
+          unityProvider={unityProvider}
+        />
+      </div>
+    </>
   )
 }
 
