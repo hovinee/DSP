@@ -7,7 +7,7 @@ import { cfWorkerUrl } from '@utils/url'
 const Anneagram = () => {
   const [category, setCategory] = useState()
 
-  const handleGameOver = useCallback((data) => {
+  const handleGameOver = useCallback((data: any) => {
     console.log(data, 'data')
     setCategory(data)
   }, [])
