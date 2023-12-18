@@ -7,6 +7,7 @@ import { headers } from 'next/headers'
 import { detectDevice } from '@utils/method'
 import clsx from 'clsx'
 import DeviceProvider from '@contexts/DeviceProvider'
+import AuthProvider from '@contexts/AuthProvider'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.labkid-industry.com/'),
@@ -38,11 +39,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={clsx('flex flex-col bg-black', notoSansKr.className)}>
-        <DeviceProvider deviceInfo={deviceInfo}>
-          <Header />
-          {children}
-          <Footer />
-        </DeviceProvider>
+        <AuthProvider>
+          <DeviceProvider deviceInfo={deviceInfo}>
+            <Header />
+            {children}
+            <Footer />
+          </DeviceProvider>
+        </AuthProvider>
       </body>
     </html>
   )

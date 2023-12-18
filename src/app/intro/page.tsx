@@ -1,6 +1,5 @@
 import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
 import CSButton from '@components/ui/button/CSButton'
-import DownLoadButton from '@components/ui/download-button/DownLoadButton'
 import BannerSection from '@components/ui/section/BannerSection'
 import CSText from '@components/ui/text/CSText'
 import { getIntroData } from '@lib/data'

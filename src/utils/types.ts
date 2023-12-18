@@ -1,3 +1,5 @@
+import { UserModel } from '@models/user'
+
 export interface Main {
   banner: {
     banner_image: string
@@ -49,4 +51,16 @@ export interface Intro {
     description: string
   }
   question: string[]
+}
+
+export type SessionUser = Omit<
+  UserModel,
+  'password' | 'isVerified' | 'isInit' | 'validationCode'
+>
+
+export interface Agreements {
+  allAgreements: boolean
+  over14: boolean
+  serviceTerms: boolean
+  privacyPolicy: boolean
 }

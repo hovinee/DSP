@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+
 interface Props {
   children: React.ReactNode
   className?: string
@@ -6,6 +8,7 @@ interface Props {
   color?: string
   rounded?: string
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  type?: 'button' | 'submit'
 }
 
 interface StringProps {
@@ -13,8 +16,9 @@ interface StringProps {
 }
 
 const buttonWidth: StringProps = {
-  '230': 'w-[23rem]',
+  '50': 'w-[5rem]',
   '148': 'w-[14.8rem]',
+  '230': 'w-[23rem]',
 }
 
 const buttonHeight: StringProps = {
@@ -26,6 +30,7 @@ const buttonColor: StringProps = {
 }
 
 const buttonRounded: StringProps = {
+  '10': 'rounded-[1rem]',
   '30': 'rounded-[3rem]',
 }
 
@@ -36,15 +41,21 @@ const CSButton = ({
   height,
   color,
   rounded,
+  type,
   onClick,
 }: Props) => {
   return (
     <button
+      type={type}
       onClick={onClick}
-      className={`grid ${height && buttonHeight[height]} ${
-        width ? buttonWidth[width] : 'w-full'
-      } place-items-center ${rounded && buttonRounded[rounded]}
-       ${color && buttonColor[color]} ${className ?? ''}`}
+      className={clsx(
+        'grid place-items-center',
+        height && buttonHeight[height],
+        width ? buttonWidth[width] : 'w-full',
+        rounded && buttonRounded[rounded],
+        color && buttonColor[color],
+        className,
+      )}
     >
       {children}
     </button>
