@@ -25,7 +25,7 @@ const Contents = async ({ params }: any) => {
   const videoData3 = await getVideoData('894337154')
   const videoData4 = await getVideoData('894337122')
   const videoData5 = await getVideoData('894337218')
-  console.log(videoData1, 'videoData1')
+
   const videoSource1 = {
     src: videoData1?.play?.hls?.link,
     type: 'application/x-mpegURL',
