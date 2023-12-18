@@ -13,7 +13,9 @@ class Database {
 
   async connect() {
     try {
-      await mongoose.connect(process.env.NEXT_PUBLIC_MONGODB_URI!)
+      await mongoose.connect(
+        'mongodb+srv://admin:rDTVFFQOvu9Oa1OM@cluster0.viw3kqj.mongodb.net/FutureVerse?retryWrites=true&w=majority',
+      )
       console.log('Database connected successfully.')
     } catch (error) {
       console.error('Database connection error:', error)
