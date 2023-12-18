@@ -20,6 +20,7 @@ const args = {
 
 const Contents = async ({ params }: any) => {
   const data = getContentsData(params.slug)
+
   const videoData1 = await getVideoData('895677331')
   const videoData2 = await getVideoData('894337178')
   const videoData3 = await getVideoData('894337154')
@@ -46,7 +47,7 @@ const Contents = async ({ params }: any) => {
     src: videoData5?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
-  console.log(videoData1)
+
   return (
     <>
       <BannerSection>
@@ -160,26 +161,43 @@ const Contents = async ({ params }: any) => {
           </div> */}
         </section>
 
-        <aside className="h-[25rem] w-[27rem] rounded-[1rem] border border-white/20 ">
-          <div className="h-[9.7rem] w-full border-b border-b-white/20 px-[2rem] pt-[2.5rem]">
-            <DownLoadButton />
-          </div>
-          <div className="w-full px-[2rem] pt-[2.5rem]">
-            <div className="flex flex-col gap-[1.4rem]">
-              {data.aside.map((value, index) => (
-                <div className="flex gap-[0.7rem]" key={index}>
-                  <AutoSizeImage
-                    src={value.image_url}
-                    className="h-[2.4rem] w-[2.4rem]"
-                  />
-                  <CSText size="18" color="white">
-                    {value.title}
-                  </CSText>
-                </div>
-              ))}
+        <div>
+          <aside className="h-[25rem] w-[27rem] rounded-[1rem] border border-white/20 ">
+            <div className="h-[9.7rem] w-full border-b border-b-white/20 px-[2rem] pt-[2.5rem]">
+              <DownLoadButton />
             </div>
-          </div>
-        </aside>
+            <div className="w-full px-[2rem] pt-[2.5rem]">
+              <div className="flex flex-col gap-[1.4rem]">
+                {data.aside.map((value, index) => (
+                  <div className="flex gap-[0.7rem]" key={index}>
+                    <AutoSizeImage
+                      src={value.image_url}
+                      className="h-[2.4rem] w-[2.4rem]"
+                    />
+                    <CSText size="18" color="white">
+                      {value.title}
+                    </CSText>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div className="px-[6rem]">
+        <div className="mb-[1.5rem] text-21 text-white">
+          10월 NCC 사내 공정불량율: 2.02%
+        </div>
+        <AutoSizeImage src={'/images/october.png'} full />
+        <div className="my-[2rem] text-31 text-green-600">
+          11월 NCC 사내 공정불량율: 1.50%
+        </div>
+        <div className="my-[1rem] text-18 text-white">
+          {
+            '▶ 품질 공정불량율(감소율): 사업 전(콘텐츠 활용 이전) 10월 2.02% > 사업 후(콘텐츠 활용 이후) 11월 1.50% 로 감소.'
+          }
+        </div>
+        <AutoSizeImage src={'/images/november.png'} full />
       </div>
       <div className="px-[1rem]">
         <CSText
