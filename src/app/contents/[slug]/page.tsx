@@ -1,11 +1,13 @@
 import SwiperSlider from '@components/swiper/SwiperSlider'
 import AutoSizeImage from '@components/ui/auto-size-image/AutoSizeImage'
+import CSButton from '@components/ui/button/CSButton'
 import DownLoadButton from '@components/ui/download-button/DownLoadButton'
 import BannerSection from '@components/ui/section/BannerSection'
 import CSText from '@components/ui/text/CSText'
 import Video from '@components/video/Video'
 import { getContentsData } from '@lib/data'
 import { getVideoData } from '@lib/video_data'
+import Link from 'next/link'
 
 const args = {
   styles: {
@@ -182,6 +184,17 @@ const Contents = async ({ params }: any) => {
               </div>
             </div>
           </aside>
+          <Link href="https://docs.google.com/presentation/d/1GRq77GcCxpNDAb9ZsovzWmo0pSsnQg-eQzvpaUKmHVo/edit#slide=id.g2a3cee2999f_0_9">
+            <CSButton
+              width="230"
+              height="45"
+              rounded="10"
+              color="fff"
+              className="mx-auto mt-[2rem] text-21 font-bold text-[#383838]"
+            >
+              PPT DOCS
+            </CSButton>
+          </Link>
         </div>
       </div>
       <div className="px-[6rem]">

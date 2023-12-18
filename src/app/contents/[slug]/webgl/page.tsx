@@ -8,8 +8,8 @@ import Progressbar from '@components/Progress-bar/ProgressBar'
 
 const Anneagram = () => {
   const [load, setLoad] = useState<boolean>(false)
-  const handleGameOver = useCallback((data: any) => {
-    console.log('??')
+
+  const handleGameOver = useCallback(() => {
     setLoad(true)
   }, [])
 
@@ -19,7 +19,6 @@ const Anneagram = () => {
     removeEventListener,
     loadingProgression,
     isLoaded,
-    sendMessage,
   } = useUnityContext({
     loaderUrl: `${cfWorkerUrl}/Build/Build_Web.loader.js`,
     dataUrl: `${cfWorkerUrl}/Build/Build_Web.data`,
@@ -36,7 +35,7 @@ const Anneagram = () => {
 
   return (
     <>
-      <div className="absolute inset-0 z-10 h-screen w-full bg-black">
+      <div className="absolute inset-0 z-10 bg-black">
         {!isLoaded && (
           <div className="fixed z-20 h-full w-full">
             <AutoSizeImage src={'/images/unity_bg.png'} full priority />
@@ -50,6 +49,8 @@ const Anneagram = () => {
             height: '100%',
             justifySelf: 'center',
             alignSelf: 'center',
+            opacity: load ? 100 : 0,
+            transition: 'opacity 1s ease',
           }}
           unityProvider={unityProvider}
         />
