@@ -3,15 +3,9 @@
 import { Unity, useUnityContext } from 'react-unity-webgl'
 import React, { useState, useEffect, useCallback } from 'react'
 import { cfWorkerUrl } from '@utils/url'
+import Overlay from '@components/overlay/Overlay'
 
-const Anneagram = () => {
-  const [category, setCategory] = useState()
-
-  const handleGameOver = useCallback((data: any) => {
-    console.log(data, 'data')
-    setCategory(data)
-  }, [])
-
+const UnityWebgl = () => {
   const {
     unityProvider,
     addEventListener,
@@ -20,30 +14,29 @@ const Anneagram = () => {
     isLoaded,
     sendMessage,
   } = useUnityContext({
-    loaderUrl: `${cfWorkerUrl}/Build/Build_Web.loader.js`,
-    dataUrl: `${cfWorkerUrl}/Build/Build_Web.data`,
-    frameworkUrl: `${cfWorkerUrl}/Build/Build_Web.framework.js`,
-    codeUrl: `${cfWorkerUrl}/Build/Build_Web.wasm`,
+    loaderUrl: `${cfWorkerUrl}/Test/Build_Web.loader.js`,
+    dataUrl: `${cfWorkerUrl}/Test/Build_Web.data`,
+    frameworkUrl: `${cfWorkerUrl}/Test/Build_Web.framework.js`,
+    codeUrl: `${cfWorkerUrl}/Test/Build_Web.wasm`,
   })
 
-  useEffect(() => {
-    addEventListener('CompleteToLoadScene', handleGameOver)
-    return () => {
-      removeEventListener('CompleteToLoadScene', handleGameOver)
-    }
-  }, [addEventListener, removeEventListener, handleGameOver])
-
-  function handleClickSpawnEnemies() {
-    sendMessage('MessageHandler', 'OnClickedStart_Intro')
-  }
+  // useEffect(() => {
+  //   addEventListener('OnSplashEnd', handleGameOver)
+  //   return () => {
+  //     removeEventListener('OnSplashEnd', handleGameOver)
+  //   }
+  // }, [addEventListener, removeEventListener, handleGameOver])
 
   return (
-    <div className="h-screen w-full">
+    <div className="absolute inset-0 z-10 h-screen w-full bg-black">
       {!isLoaded && (
-        <p className="text-white">
-          Loading Application... {Math.round(loadingProgression * 100)}%
-        </p>
+        <Overlay>
+          <p className="z-20 text-21 text-white">
+            Loading Application... {Math.round(loadingProgression * 100)}%
+          </p>
+        </Overlay>
       )}
+
       <Unity
         style={{
           width: '100%',
@@ -53,11 +46,8 @@ const Anneagram = () => {
         }}
         unityProvider={unityProvider}
       />
-      <button className="h-12 w-20 bg-white" onClick={handleClickSpawnEnemies}>
-        Spawn Enemies
-      </button>
     </div>
   )
 }
 
-export default Anneagram
+export default UnityWebgl
