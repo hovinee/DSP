@@ -20,7 +20,7 @@ const args = {
 
 const Contents = async ({ params }: any) => {
   const data = getContentsData(params.slug)
-  const videoData1 = await getVideoData('894337192')
+  const videoData1 = await getVideoData('895677331')
   const videoData2 = await getVideoData('894337178')
   const videoData3 = await getVideoData('894337154')
   const videoData4 = await getVideoData('894337122')
@@ -46,7 +46,7 @@ const Contents = async ({ params }: any) => {
     src: videoData5?.play?.hls?.link,
     type: 'application/x-mpegURL',
   }
-
+  console.log(videoData1)
   return (
     <>
       <BannerSection>
