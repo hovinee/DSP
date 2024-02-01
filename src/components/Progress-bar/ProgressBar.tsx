@@ -7,7 +7,7 @@ interface Props {
 
 const Progressbar = ({ number }: Props) => {
   return (
-    <Overlay>
+    <Overlay progress>
       <div className="z-10 w-1/3 rounded-full bg-gray-200 dark:bg-gray-700">
         <div
           className="h-2.5 rounded-full bg-green-700 p-0.5 text-center text-xs font-medium leading-none  text-blue-100"
