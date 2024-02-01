@@ -23,7 +23,6 @@ export const updateUserByEmail = async (
   email: string,
   update: UpdateQuery<any>,
 ) => {
-  console.log('console')
   await Database.getInstance()
   return await User.findOneAndUpdate({ email: email }, update, { new: true })
 }
