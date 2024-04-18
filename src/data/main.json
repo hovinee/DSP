@@ -61,8 +61,7 @@
           "description": "예비 진로상담 전문가를 위한 교육을 제공하는 상담훈련소",
           "type": "2d",
           "dsp_icon": "/images/unity/counseling/training_image.png",
-          "thumbnail": "/images/unity/counseling/training_image.png",
-          "path": "https://futureverse-bay.vercel.app/counsel/trainer"
+          "thumbnail": "/images/unity/counseling/training_image.png"
         },
         {
           "title": "라이브모드",
