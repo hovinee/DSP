@@ -9,11 +9,13 @@ export interface Main {
     intro3: string
   }
   contents: {
-    title: string
-    description: string
-    type: string
-    dsp_icon: string
-    thumbnail: string
+    industry: {
+      title: string
+      description: string
+      type: string
+      dsp_icon: string
+      thumbnail: string
+    }[]
   }[]
 }
 

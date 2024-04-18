@@ -8,39 +8,122 @@
   },
   "contents": [
     {
-      "title": "DSP",
-      "description": "소재 기술의 선두주자, DSP의 세계를 깊이 살펴보세요!",
-      "type": "3d",
-      "dsp_icon": "/images/logo/dsp_logo.png",
-      "thumbnail": "/images/thumbnail/dsp.png"
+      "industry": [
+        {
+          "title": "DSP",
+          "description": "소재 기술의 선두주자, DSP의 세계를 깊이 살펴보세요!",
+          "type": "3d",
+          "dsp_icon": "/images/logo/dsp_logo.png",
+          "thumbnail": "/images/thumbnail/dsp.png"
+        },
+        {
+          "title": "굿네이버스",
+          "description": "ZEPETO 기반의 클린 빌리지",
+          "type": "2d",
+          "dsp_icon": "/images/logo/naver_logo.png",
+          "thumbnail": "/images/thumbnail/naver.png"
+        },
+        {
+          "title": "공항철도주식회사",
+          "description": "기관사가 되어 계기판 점검, BHS 체크 등 승객들을 위한 일을 해보자",
+          "type": "2d",
+          "dsp_icon": "/images/logo/train_logo.png",
+          "thumbnail": "/images/thumbnail/train.png"
+        },
+        {
+          "title": "포스코1%나눔재단",
+          "description": "포스코1%나눔재단의 그리닛포스 메타버스",
+          "type": "2d",
+          "dsp_icon": "/images/logo/posco_logo.png",
+          "thumbnail": "/images/thumbnail/posco.png"
+        },
+        {
+          "title": "한국항공우주산업",
+          "description": "항공기의 관련된 과학적 논리들을 한번에",
+          "type": "2d",
+          "dsp_icon": "/images/logo/kai_logo.png",
+          "thumbnail": "/images/thumbnail/kai.png"
+        }
+      ]
     },
     {
-      "title": "굿네이버스",
-      "description": "ZEPETO 기반의 클린 빌리지",
-      "type": "2d",
-      "dsp_icon": "/images/logo/naver_logo.png",
-      "thumbnail": "/images/thumbnail/naver.png"
+      "ai": [
+        {
+          "title": "AI 개인상담",
+          "description": "AI 기반 메타버스 상에서 개인 맞춤형 진로 상담을 제공하는 상담소",
+          "type": "2d",
+          "dsp_icon": "/images/unity/counseling/counseling_image.png",
+          "thumbnail": "/images/unity/counseling/counseling_image.png",
+          "path": "https://futureverse-bay.vercel.app/counsel/client"
+        },
+        {
+          "title": "AI 상담훈련",
+          "description": "예비 진로상담 전문가를 위한 교육을 제공하는 상담훈련소",
+          "type": "2d",
+          "dsp_icon": "/images/unity/counseling/training_image.png",
+          "thumbnail": "/images/unity/counseling/training_image.png",
+          "path": "https://futureverse-bay.vercel.app/counsel/trainer"
+        },
+        {
+          "title": "라이브모드",
+          "description": "실시간으로 개인 맞춤형 진로 상담을 제공하는 상담소",
+          "type": "2d",
+          "dsp_icon": "/images/unity/counseling/live_image.png",
+          "thumbnail": "/images/unity/counseling/live_image.png"
+        },
+        {
+          "title": "집단상담",
+          "description": "자신의 진로와 적성을 탐색하는 데 필요한 전문 상담소",
+          "type": "2d",
+          "dsp_icon": "/images/unity/counseling/group_image.png",
+          "thumbnail": "/images/unity/counseling/group_image.png"
+        }
+      ]
     },
     {
-      "title": "공항철도주식회사",
-      "description": "기관사가 되어 계기판 점검, BHS 체크 등 승객들을 위한 일을 해보자",
-      "type": "2d",
-      "dsp_icon": "/images/logo/train_logo.png",
-      "thumbnail": "/images/thumbnail/train.png"
+      "healing": [
+        {
+          "title": "고래의 꿈",
+          "description": "고래가 떠다니는 신비로운 섬!",
+          "type": "2d",
+          "dsp_icon": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/d7f90573-5162-490b-9675-c45c15accf00/public",
+          "thumbnail": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/d7f90573-5162-490b-9675-c45c15accf00/public",
+          "path": "https://futureverse-bay.vercel.app/healing/whale"
+        },
+        {
+          "title": "가인역",
+          "description": "꿈과 희망의 역으로 향하는 행복기차",
+          "type": "2d",
+          "dsp_icon": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/b0aa5803-1fcf-455e-46f1-da612d90aa00/public",
+          "thumbnail": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/b0aa5803-1fcf-455e-46f1-da612d90aa00/public",
+          "path": "https://futureverse-bay.vercel.app/healing/whale"
+        },
+        {
+          "title": "캠핑장",
+          "description": "심리적 안정감과 평안, 낭만이 가득한 캠핑장",
+          "type": "2d",
+          "dsp_icon": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/7915f478-81d4-4e1c-cd34-3ecf89e9a400/public",
+          "thumbnail": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/7915f478-81d4-4e1c-cd34-3ecf89e9a400/public"
+        },
+        {
+          "title": "산타마을",
+          "description": "산타를 기다리면 준비하는 크리스마스",
+          "type": "2d",
+          "dsp_icon": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/f78deff7-dcf4-43e2-86c0-7f09837b7100/public",
+          "thumbnail": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/f78deff7-dcf4-43e2-86c0-7f09837b7100/public"
+        }
+      ]
     },
     {
-      "title": "포스코1%나눔재단",
-      "description": "포스코1%나눔재단의 그리닛포스 메타버스",
-      "type": "2d",
-      "dsp_icon": "/images/logo/posco_logo.png",
-      "thumbnail": "/images/thumbnail/posco.png"
-    },
-    {
-      "title": "한국항공우주산업",
-      "description": "항공기의 관련된 과학적 논리들을 한번에",
-      "type": "2d",
-      "dsp_icon": "/images/logo/kai_logo.png",
-      "thumbnail": "/images/thumbnail/kai.png"
+      "yeonsu": [
+        {
+          "title": "케디타운",
+          "description": "편리한 가상 원격 연수",
+          "type": "2d",
+          "dsp_icon": "/images/thumbnail/yeonsu.png",
+          "thumbnail": "/images/thumbnail/yeonsu.png"
+        }
+      ]
     }
   ]
 }
