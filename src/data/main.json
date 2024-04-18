@@ -102,7 +102,8 @@
           "description": "심리적 안정감과 평안, 낭만이 가득한 캠핑장",
           "type": "2d",
           "dsp_icon": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/7915f478-81d4-4e1c-cd34-3ecf89e9a400/public",
-          "thumbnail": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/7915f478-81d4-4e1c-cd34-3ecf89e9a400/public"
+          "thumbnail": "https://imagedelivery.net/8bL_DmW332yquDyMdhD8rg/7915f478-81d4-4e1c-cd34-3ecf89e9a400/public",
+          "path": "https://futureverse-bay.vercel.app/healing/camp"
         },
         {
           "title": "산타마을",

@@ -51,7 +51,7 @@ const Contents = ({ data }: Props) => {
   }, [divRef.current?.offsetHeight])
 
   return (
-    <section className="px-[4rem] pb-[9rem]  xl:gap-y-[5rem] xl:px-[9rem]">
+    <section className="px-[4rem] pb-[9rem] xl:px-[9rem]">
       <ul className="flex gap-4 text-xl">
         {['산업체험', '직장인 AI 상담', '힐링월드', '메타버스 연수원'].map(
           (value, index) => (
@@ -65,7 +65,7 @@ const Contents = ({ data }: Props) => {
           ),
         )}
       </ul>
-      <div className="grid w-full grid-cols-1 gap-x-[1rem] gap-y-[3rem]  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+      <div className="grid w-full grid-cols-1 gap-x-[1rem] gap-y-[3rem] sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {categoryIndex === 0 && (
           <>
             {deviceInfo === 'Windows' ? (
